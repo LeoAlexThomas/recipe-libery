@@ -4,19 +4,23 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import RecipeDetails from "./Pages/RecipeDetails";
-import NotFound from "./Pages/NotFound";
+import PageNotFound from "./Pages/NotFound";
+import { ToastContainer } from "react-toastify";
+import RecipeWithCategory from "./Pages/RecipeWithCategory";
 
 const App = () => {
   return (
-    <div className="h-screen bg-back">
+    <div className="h-screen bg-back font-body">
+      <ToastContainer />
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           {/* Dynamic Route */}
           <Route path="/recipe/:id" element={<RecipeDetails />} />
+          <Route path="/recipe/category/:id" element={<RecipeWithCategory />} />
           {/* No Match Route */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

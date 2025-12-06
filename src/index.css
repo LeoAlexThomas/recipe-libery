@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-Title: "Roboto Slab", sans-serif;
-  --font-body: "Source Code Pro", sans-serif;
+  --font-Title: "Playfair Display", sans-serif;
+  --font-body: "Lato", sans-serif;
 
   --color-highlight: #ff9f43;
   --color-secondary: #f2f2f2;

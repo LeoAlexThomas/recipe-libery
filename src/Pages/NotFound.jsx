@@ -1,7 +1,13 @@
 import React from "react";
+import { PiWarningOctagonFill } from "react-icons/pi";
 
-const NotFound = () => {
-  return <div>Page not found</div>;
+const PageNotFound = () => {
+  return (
+    <div className="h-screen flex items-center justify-center flex-col">
+      <PiWarningOctagonFill className="w-20 h-20 text-error" />
+      <p className="text-xl font-medium">Page not found</p>
+    </div>
+  );
 };
 
-export default NotFound;
+export default PageNotFound;
