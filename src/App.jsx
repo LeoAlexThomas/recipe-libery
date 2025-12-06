@@ -7,6 +7,7 @@ import RecipeDetails from "./Pages/RecipeDetails";
 import PageNotFound from "./Pages/NotFound";
 import { ToastContainer } from "react-toastify";
 import RecipeWithCategory from "./Pages/RecipeWithCategory";
+import SearchRecipe from "./Pages/SearchRecipe";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/searchRecipes" element={<SearchRecipe />} />
           {/* Dynamic Route */}
           <Route path="/recipe/:id" element={<RecipeDetails />} />
           <Route path="/recipe/category/:id" element={<RecipeWithCategory />} />

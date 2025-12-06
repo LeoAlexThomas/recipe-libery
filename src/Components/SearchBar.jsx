@@ -3,14 +3,14 @@ import { IoSearchSharp } from "react-icons/io5";
 
 const SearchBar = ({ search, setSearch, handleClearSearch }) => {
   return (
-    <div className={`w-full max-w-full lg:max-w-[500px] relative `}>
+    <div className={`w-full max-w-full mx-auto lg:max-w-[500px] relative `}>
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search Movies"
         name="movieSearch"
         type="text"
-        className="border w-full bg-white rounded p-2 font-Body text-base text-black outline-none pl-12 pr-9"
+        className="border w-full bg-white rounded-lg p-2 font-Body text-base text-black outline-none pl-12 pr-9"
       />
       <IoSearchSharp className="w-6 h-6 absolute top-1/2 -translate-1/2 left-6 text-primary" />
       {search.length !== 0 && (
