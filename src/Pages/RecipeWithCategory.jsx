@@ -19,7 +19,7 @@ const RecipeWithCategory = () => {
   }
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading label="Loading Recipes" showFullScreen={true} />;
   }
 
   if (!item || item.meals.length === 0) {
