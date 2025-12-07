@@ -1,27 +1,44 @@
 import React from "react";
 import Logo from "./Logo";
 import { FaSearch } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleSearchRecipe = () => {
     navigate("/searchRecipes");
   };
 
+  const handleHomeClicked = () => {
+    navigate("/");
+  };
+
   return (
-    <div className="w-full bg-accent shadow-md">
+    <nav className="w-full bg-accent shadow-md">
       <div className=" flex justify-between p-4 w-full max-w-[1440px] mx-auto items-center">
         <Logo />
-        <div
-          className="border-2 border-white rounded-lg w-10 h-10 content-center justify-items-center cursor-pointer"
-          onClick={handleSearchRecipe}
-        >
-          <FaSearch className="text-white" />
-        </div>
+        <ul className="flex gap-4 text-white text-base sm:text-lg">
+          <li
+            className={`cursor-pointer hover:underline hover:font-medium  ${
+              location.pathname === "/" && "underline font-bold"
+            }`}
+            onClick={handleHomeClicked}
+          >
+            Home
+          </li>
+          <li
+            className={`cursor-pointer hover:underline hover:font-medium ${
+              location.pathname === "/searchRecipes" && "underline font-bold"
+            } `}
+            onClick={handleSearchRecipe}
+          >
+            Search
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

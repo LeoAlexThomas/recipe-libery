@@ -4,7 +4,7 @@ const ErrorMessage = ({ message, showFullScreen }) => {
   return (
     <div
       className={`flex flex-col gap-2 justify-center items-center  ${
-        showFullScreen ? "h-screen top-1/2" : ""
+        showFullScreen ? "h-screen top-1/2" : "h-32"
       }`}
     >
       <MdErrorOutline className="text-error w-10 h-10" />

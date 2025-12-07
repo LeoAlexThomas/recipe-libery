@@ -1,21 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import RecipeCategoryBadge from "./RecipeCategoryBadge";
+import {
+  addFavoriteRecipe,
+  isRecipeFavorite,
+  removeFavoriteRecipe,
+} from "../Utils/favoriteManage";
+import FavoriteCard from "./FavoriteCard";
 
 const RecipeCard = ({ meal, mealCategory }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/recipe/${meal.idMeal}`);
+  };
+
   return (
-    <div className="mb-6 p-4 rounded-lg max-w-[320px] flex flex-col justify-start gap-2 shadow-none hover:scale-105 hover:shadow-highlight cursor-pointer">
-      <div className="relative">
-        <img
-          src={meal.strMealThumb}
-          alt={meal.strMeal}
-          className="object-cover rounded-lg relative"
-        />
-        <div className="rounded-lg bg-accent p-2 w-fit text-white font-medium absolute bottom-2 right-2 ">
-          {meal.strCategory ?? mealCategory}
+    <div className="relative">
+      <div
+        className="px-0 sm:px-4 py-4 rounded-lg max-w-[320px] flex flex-col justify-start gap-2 hover:scale-105 cursor-pointer"
+        onClick={handleClick}
+      >
+        <div className="relative w-full">
+          <img
+            src={meal.strMealThumb}
+            alt={meal.strMeal}
+            className="object-cover rounded-lg"
+          />
+          <div className="absolute bottom-2 right-2 ">
+            <RecipeCategoryBadge category={meal.strCategory ?? mealCategory} />
+          </div>
         </div>
+        <h2 className="font-Title text-xl sm:text-2xl font-semibold">
+          {meal.strMeal}
+        </h2>
       </div>
-      <h2 className="font-Title text-xl font-semibold line-clamp-2">
-        {meal.strMeal}
-      </h2>
+      <div className="absolute top-6 left-6 ">
+        <FavoriteCard mealId={meal.idMeal} />
+      </div>
     </div>
   );
 };

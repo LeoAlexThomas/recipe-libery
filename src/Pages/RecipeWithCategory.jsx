@@ -31,7 +31,7 @@ const RecipeWithCategory = () => {
       <h3 className="font-Title text-2xl font-bold mb-4">
         Recipes with {category}
       </h3>
-      <div className="flex gap-8 flex-wrap justify-center">
+      <div className="flex gap-4 flex-wrap justify-center">
         {item.meals.map((meal) => (
           <Fragment key={meal.idMeal}>
             <RecipeCard meal={meal} mealCategory={category} />

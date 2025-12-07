@@ -29,7 +29,7 @@ const RecipeCategories = () => {
 
   return (
     <div className="p-4 max-w-[1440px] mx-auto">
-      <h3 className="font-Title text-2xl font-bold mb-4">CATEGORIES</h3>
+      <h3 className="font-Title text-2xl font-bold my-4">CATEGORIES</h3>
       <div className="flex flex-nowrap gap-2 columns-2xl w-full overflow-x-auto">
         {item.categories.map((category) => {
           return (

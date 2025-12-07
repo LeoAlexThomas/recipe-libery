@@ -23,8 +23,8 @@ const RecipeList = () => {
 
   return (
     <div className="p-4 max-w-[1440px] mx-auto">
-      <h1 className="font-Title text-2xl font-bold mb-4">RECIPES</h1>
-      <div className="flex gap-8 flex-wrap justify-center">
+      <h1 className="font-Title text-2xl font-bold mb-4">POPULAR RECIPES</h1>
+      <div className="flex gap-6 xl:gap-10 flex-wrap justify-center">
         {item.meals.map((meal) => (
           <Fragment key={meal.idMeal}>
             <RecipeCard meal={meal} />

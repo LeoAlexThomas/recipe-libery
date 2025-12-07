@@ -11,9 +11,9 @@ const Logo = () => {
       <img
         src="/images/recipe-icon.png"
         alt="Logo"
-        className="rounded-full w-14 h-14"
+        className="rounded-full w-10 h-10 sm:w-14 sm:h-14"
       />
-      <h4 className="font-Title text-3xl font-bold text-white">
+      <h4 className="font-Title text-xl sm:text-3xl font-bold text-white">
         Recipe Library
       </h4>
     </div>

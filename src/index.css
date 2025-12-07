@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+/* Remove text selection background color */
+::selection {
+  background-color: transparent;
+  color: inherit;
+}
+
 @theme {
   --font-Title: "Playfair Display", sans-serif;
   --font-body: "Lato", sans-serif;
 
-  --color-highlight: #ff9f43;
+  --color-highlight: #ae6027;
   --color-secondary: #f2f2f2;
   --color-back: #ffffff;
   --color-accent: #27ae60;

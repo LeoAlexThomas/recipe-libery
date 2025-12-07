@@ -4,7 +4,9 @@ const EmptyMessage = ({ message, showFullScreen }) => {
   return (
     <div
       className={`flex justify-center p-4 items-center flex-col h-full ${
-        showFullScreen ? "h-screen top-1/2 left-1/2 -translate-y-1/2 my-40" : ""
+        showFullScreen
+          ? "h-screen top-1/2 left-1/2 -translate-y-1/2 my-40"
+          : "h-32"
       }`}
     >
       <HiOutlineEmojiSad className="w-8 h-8 text-error " />

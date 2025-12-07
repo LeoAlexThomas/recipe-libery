@@ -5,11 +5,12 @@ import Loading from "../Components/Loading";
 import useApiCall from "../Hooks/useApiCall";
 import RecipeCard from "../Components/RecipeCard";
 import EmptyMessage from "../Components/EmptyMessage";
+import { isEmpty } from "lodash";
 
 const SearchRecipe = () => {
   const [search, setSearch] = useState("");
 
-  const { item, loading, error } = useApiCall({
+  const { item, isLoading, error } = useApiCall({
     url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`,
   });
 
@@ -17,7 +18,7 @@ const SearchRecipe = () => {
     if (error) {
       return <ErrorMessage message="Failed to load recipes." />;
     }
-    if (loading) {
+    if (isLoading) {
       return <Loading />;
     }
     if (!item || item.meals === null || item.meals.length === 0) {
@@ -45,7 +46,9 @@ const SearchRecipe = () => {
           handleClearSearch={() => setSearch("")}
         />
       </div>
-      <h4 className="font-Title text-2xl font-bold text-accent">Results:</h4>
+      <h4 className="font-Title text-2xl font-bold text-accent">
+        {isEmpty(search) ? "Initial results" : `Results of ${search}`}:
+      </h4>
       {renderRecipes()}
     </div>
   );
