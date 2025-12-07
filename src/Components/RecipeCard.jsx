@@ -35,7 +35,7 @@ const RecipeCard = ({ meal, mealCategory }) => {
           {meal.strMeal}
         </h2>
       </div>
-      <div className="absolute top-6 left-6 ">
+      <div className="absolute top-6 left-2 sm:left-6 ">
         <FavoriteCard mealId={meal.idMeal} />
       </div>
     </div>
