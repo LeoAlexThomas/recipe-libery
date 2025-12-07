@@ -19,10 +19,12 @@ const SearchRecipe = () => {
       return <ErrorMessage message="Failed to load recipes." />;
     }
     if (isLoading) {
-      return <Loading />;
+      return (
+        <Loading label="searching for the recipes" showFullScreen={true} />
+      );
     }
     if (!item || item.meals === null || item.meals.length === 0) {
-      return <EmptyMessage message="No recipes found." />;
+      return <EmptyMessage message="No recipes found." showFullScreen={true} />;
     }
     return (
       <div>

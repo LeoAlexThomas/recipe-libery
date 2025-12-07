@@ -16,7 +16,7 @@ const RecipeCategories = () => {
     return <ErrorMessage message="Failed to load categories." />;
   }
   if (isLoading) {
-    return <Loading />;
+    return <Loading label="Loading Categories" />;
   }
 
   if (!item || item.categories.length === 0) {

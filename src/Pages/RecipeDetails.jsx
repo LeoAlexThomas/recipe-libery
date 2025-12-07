@@ -17,7 +17,8 @@ const RecipeDetails = () => {
   });
 
   if (error) return <ErrorMessage message="Failed to load recipe details." />;
-  if (isLoading) return <Loading />;
+  if (isLoading)
+    return <Loading label="Loading recipe details" showFullScreen={true} />;
 
   if (!item || item.meals.length === 0)
     return <EmptyMessage message="Recipe not available" />;
