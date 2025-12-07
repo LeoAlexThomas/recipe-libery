@@ -1,16 +1,116 @@
-# React + Vite
+# Recipe Liberty
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recipe Liberty is a web application that allows users to search and discover various recipes from around the world. The application is built using React, React Router, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- Vite 7
+- Tailwind CSS 4
+- React Icons
+- Lodash
+- Axios for API calls
+- TheMealDB API for recipe data
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+RECIPE-LIBRARY/
+├── public/
+│   ├── Images/
+│   │   ├── recipe-logo.png
+├── src/
+│   ├── Components/
+│   │   ├── CategoryCard.jsx
+│   │   ├── EmptyMessage.jsx
+│   │   ├── ErrorMessage.jsx
+│   │   ├── FavoriteCard.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Loading.jsx
+│   │   ├── Logo.jsx
+│   │   ├── RecipeCard.jsx
+│   │   ├── RecipeCategories.jsx
+│   │   ├── RecipeCategoryBadge.jsx
+│   │   ├── RecipeList.jsx
+│   │   └── SearchBar.jsx
+│   ├── Hooks/
+│   │   ├── useApiCall.jsx
+│   ├── Pages/
+│   │   ├── HomePage.jsx
+│   │   ├── PageNotFound.jsx
+│   │   ├── RecipeDetails.jsx
+│   │   ├── RecipeWithCategory.jsx
+│   │   ├── SearchRecipe.jsx
+│   ├── Utils/
+│   │   ├── favoriteManage.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── netlify.toml
+├── vite.config.js
+├── eslint.config.js
+└── package.json
+```
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/LeoAlexThomas/recipe-libery.git
+   cd recipe-libery
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Development
+
+To start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173` by default.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Features
+
+- Search for recipes by name
+- Filter recipes by category
+- Display recipe details, including ingredients and instructions
+- Allow users to save and view their favorite recipes [Browser Local Storage]
+- Responsive design for optimal user experience on desktop and mobile devices
