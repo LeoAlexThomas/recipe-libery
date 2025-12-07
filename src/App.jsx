@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import RecipeDetails from "./Pages/RecipeDetails";
-import PageNotFound from "./Pages/NotFound";
+import PageNotFound from "./Pages/PageNotFound";
 import { ToastContainer } from "react-toastify";
 import RecipeWithCategory from "./Pages/RecipeWithCategory";
 import SearchRecipe from "./Pages/SearchRecipe";
