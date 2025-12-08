@@ -9,6 +9,7 @@ const CategoryCard = ({ category, onCategoryClicked }) => {
       <img
         src={category.strCategoryThumb}
         alt={category.strCategory}
+        loading="eager"
         className="w-24 object-contain drop-shadow-lg"
       />
 

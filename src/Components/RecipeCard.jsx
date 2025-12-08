@@ -25,6 +25,7 @@ const RecipeCard = ({ meal, mealCategory }) => {
           <img
             src={meal.strMealThumb}
             alt={meal.strMeal}
+            loading="eager"
             className="object-cover rounded-lg"
           />
           <div className="absolute bottom-2 right-2 ">
