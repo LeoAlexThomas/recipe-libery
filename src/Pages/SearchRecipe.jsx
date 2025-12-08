@@ -5,7 +5,7 @@ import Loading from "../Components/Loading";
 import useApiCall from "../Hooks/useApiCall";
 import RecipeCard from "../Components/RecipeCard";
 import EmptyMessage from "../Components/EmptyMessage";
-import { isEmpty } from "lodash";
+import isEmpty from "lodash/isEmpty";
 
 const SearchRecipe = () => {
   const [search, setSearch] = useState("");

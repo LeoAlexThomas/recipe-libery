@@ -6,7 +6,7 @@ import EmptyMessage from "../Components/EmptyMessage";
 import useApiCall from "../Hooks/useApiCall";
 import { FaLocationDot } from "react-icons/fa6";
 import RecipeCategoryBadge from "../Components/RecipeCategoryBadge";
-import { range } from "lodash";
+import range from "lodash/range";
 import FavoriteCard from "../Components/FavoriteCard";
 
 const RecipeDetails = () => {
