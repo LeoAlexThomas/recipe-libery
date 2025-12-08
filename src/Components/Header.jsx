@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "./Logo";
-import { FaSearch } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {

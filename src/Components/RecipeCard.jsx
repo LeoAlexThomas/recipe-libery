@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import RecipeCategoryBadge from "./RecipeCategoryBadge";
-import {
-  addFavoriteRecipe,
-  isRecipeFavorite,
-  removeFavoriteRecipe,
-} from "../Utils/favoriteManage";
 import FavoriteCard from "./FavoriteCard";
 
 const RecipeCard = ({ meal, mealCategory }) => {
@@ -25,7 +19,6 @@ const RecipeCard = ({ meal, mealCategory }) => {
           <img
             src={meal.strMealThumb}
             alt={meal.strMeal}
-            loading="eager"
             className="object-cover rounded-lg"
           />
           <div className="absolute bottom-2 right-2 ">
